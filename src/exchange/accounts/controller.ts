@@ -8,7 +8,10 @@ const {
 } = process.env;
 
 /** 내가 보유한 자산 리스트 조회 */
-export async function getAccountInfoCtr (request: FastifyRequest, reply: FastifyReply)  {
+export async function getAccountInfoCtr (
+  request: FastifyRequest,
+  reply: FastifyReply
+)  {
   try {
     const response = await axios.get(`${UPBIT_OPEN_API_SERVER}/v1/accounts`, {
       headers: {
